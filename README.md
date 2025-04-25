@@ -14,7 +14,7 @@ Hamibot MCP Server 是一个基于 Model Context Protocol (MCP) 的服务器实�
 ### Manual Installation
 
 ```bash
-npm install -g @hamibot/hamibot-mcp-server
+npm install -g @hmbt/hamibot-mcp-server
 ```
 
 ## Setup
@@ -33,7 +33,7 @@ Add to your `claude_desktop_config.json`:
   "mcpServers": {
     "todoist": {
       "command": "npx",
-      "args": ["-y", "@hamibot/hamibot-mcp-server"],
+      "args": ["-y", "@hmbt/hamibot-mcp-server"],
       "env": {
         "HAMIBOT_PERSONAL_ACCESS_TOKEN": "你的访问令牌"
       }
