@@ -1,0 +1,37 @@
+{
+  "name": "@hamibot/hamibot-mcp-server",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "hamibot-mcp-server": "dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc && node -e \"require('fs').chmodSync('dist/index.js', '755')\"",
+    "start": "node dist/index.js",
+    "watch": "tsc --watch"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/hamibot/hamibot-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hamibot/hamibot-mcp-server.git"
+  },
+  "keywords": [
+    "hamibot",
+    "mcp"
+  ],
+  "author": {
+    "name": "hamibot",
+    "email": "hello@hamibot.com",
+    "url": "https://hamibot.com/"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.9.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.14.1",
+    "typescript": "^5.8.3"
+  }
+}
