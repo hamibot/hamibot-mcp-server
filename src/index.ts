@@ -67,6 +67,16 @@ class HamibotClient {
         throw new Error(`API Error (${response.status}): ${errorText}`);
       }
 
+      if (response.status === 204) {
+        return { data: {} as T };
+      }
+
+      const contentType = response.headers.get('content-type');
+      if (contentType && !contentType.includes('application/json')) {
+        const text = await response.text();
+        return { data: text as unknown as T };
+      }
+
       return await response.json();
     } catch (error) {
       throw new Error(`Request failed: ${error instanceof Error ? error.message : 'Unknown error'}`);
