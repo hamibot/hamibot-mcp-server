@@ -76,8 +76,13 @@ Hamibot MCP Server 是一个基于 Model Context Protocol (MCP) 的服务器实�
 - `获取脚本列表`
 - `在 "设备名" 上运行脚本 "脚本名"`，设备名和脚本名加引号，会更明确，例如 `在 "初号机" 上运行脚本 "演示脚本"`
 
-![在 "初号机" 上运行脚本 "演示脚本"](assets/img1.png)
-![在 "初号机" 上运行脚本 "演示脚本"](assets/img2.png)
+![运行脚本](assets/img1.png)
+![运行脚本](assets/img2.png)
+
+- `在所有 tag1 标签的设备上运行 "演示脚本"`
+- `在初号机上运行这个脚本文件`
+
+![运行脚本文件](assets/img3.png)
 
 ## 💻 开发
 
