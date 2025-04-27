@@ -9,29 +9,33 @@ Hamibot MCP Server 是一个基于 Model Context Protocol (MCP) 的服务器实�
 - 代码执行：在指定设备上执行自定义 JavaScript 代码
 - 支持变量传递：可以向脚本传递自定义参数
 
-## Installation
+## 安装
 
-### Manual Installation
+### 手动安装
 
 ```bash
 npm install -g @hmbt/hamibot-mcp-server
 ```
 
-## Setup
+## 配置
 
 ### 获取访问令牌
 
-1. 访问 https://hamibot.com/account/tokens
+1. 访问 <https://hamibot.com/account/tokens>
 2. 点击生成
 
-### Usage with Claude Desktop
+### 在 Trae 中使用
 
-Add to your `claude_desktop_config.json`:
+详细步骤参考 Trae 文档：<https://docs.trae.ai/ide/model-context-protocol?_lang=zh>
+
+1. 按键 `F1`
+2. 输入 `open mcp config json`，点击进去
+3. 在 `mcp.json` 中添加：
 
 ```json
 {
   "mcpServers": {
-    "todoist": {
+    "hamibot": {
       "command": "npx",
       "args": ["-y", "@hmbt/hamibot-mcp-server"],
       "env": {
@@ -41,6 +45,8 @@ Add to your `claude_desktop_config.json`:
   }
 }
 ```
+
+> 其他客户端请参考相应的文档
 
 ## 可用工具
 
@@ -71,6 +77,10 @@ Add to your `claude_desktop_config.json`:
 - code: JavaScript Hamibot 代码
 - devices: 设备列表，包含设备 ID 和可选的设备名称
 - vars: (可选) 传递给代码的变量
+
+## 示例
+
+- `在 "设备名" 上运行脚本 "脚本名"`，设备名和脚本名加引号，会更明确，例如 `在 "初号机" 上运行脚本 "演示脚本"`
 
 ## 开发
 
